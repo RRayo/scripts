@@ -1,5 +1,7 @@
 import random
 
+# script to calculate optimal combinations of cuts for italian longsword (HEMA)
+
 movements = ["Fd", "Fi", "Md", "Mi", "Sd", "Si", "S"]
 non_optimal_combinations = set([
     # same movement
