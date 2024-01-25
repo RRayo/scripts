@@ -47,13 +47,17 @@ def calculateCombinations(length_combinations=3, optimal=True, combinations=None
 def printCombinations(combinations):
     for combination in combinations:
         print(" -> ".join(combination))
+    print("\n")
 
 
 sample_size = 4
 combinations = calculateCombinations(length_combinations=2, optimal=True)
+min_movements = 3
+max_movements = 10
+
 print("Pares óptimos (", len(combinations), "):")
 printCombinations(combinations)
-for i in range(3,15):
+for i in range(min_movements, max_movements+1):
     combinations = calculateCombinations(length_combinations=i, optimal=True, combinations=combinations)
     print("Combinaciones para cadena de largo ", i, ": ", len(combinations))
     if i == 6:
@@ -64,6 +68,6 @@ print("\nMuestreo de combinaciones de golpes óptimos:")
 printCombinations(random_elements)
 non_optimal_combinations = calculateCombinations(length_combinations=6, optimal=False)
 random_elements = random.sample(non_optimal_combinations, sample_size)
-print("\nMuestreo de combinaciones de golpes NO óptimos:")
+print("Muestreo de combinaciones de golpes NO óptimos:")
 printCombinations(random_elements)
 
