@@ -55,7 +55,7 @@ def printCombinations(combinations):
 sample_size = 4
 combinations = calculateCombinations(length_combinations=2, optimal=True)
 min_movements = 3
-max_movements = 10
+max_movements = 15
 
 print("Pares óptimos (", len(combinations), "):")
 printCombinations(combinations)
